@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Sprite sheet
+   ========================================================================== */
+
+/* ============================================================
+  CUSTOM PAGINATION
+============================================================ */
+.custom-pagination span,
+.custom-pagination a {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: .9em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .4);
+}
+.custom-pagination a {
+  background-color: rgba(0, 0, 0, .06);
+  color: $color-secondary;
+}
+.custom-pagination a:hover {
+  background-color: $color-secondary;
+  color: #fff;
+}
+.custom-pagination span.page-num {
+  margin-right: 10px;
+  padding: 0;
+}
+.custom-pagination span.dots {
+  padding: 0;
+  color: gainsboro;
+}
+.custom-pagination span.current {
+  background-color: $color-secondary;
+  color: #fff;
+}

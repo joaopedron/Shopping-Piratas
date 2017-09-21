@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+
+.sidebar {
+    @include column(3.5);
+    background-color: $light;
+    padding: 30px;
+    box-shadow: 0 2px 0 rgba(0,0,0,.06);
+    border-radius: 3px;
+}
+
+.sidebar.stores {
+    @include column(3.5);
+    @include pull(0.5);
+    margin-top: 0;
+    position: relative;
+}
+
+.widget {
+    margin-bottom: 20px;
+    & h4 {
+        text-transform: uppercase;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        font-family: $font-secondary-light;
+    }
+    & ul {
+        & li {
+            line-height: 16px;
+            margin-bottom: 10px;
+            & a {
+                font-size: .9em;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.widget_search {
+    & .search-field {
+        padding: 10px;
+        border-radius: 360px;
+        display: block;
+        width: 100%;
+        border: 2px solid rgba(0,0,0,0.1);
+        outline: 0;
+        transition: all .2s ease-in-out;
+        &:focus {
+            border: 2px solid $color-primary;
+        }
+    }
+}

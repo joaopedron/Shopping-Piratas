@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    background-color: $color-primary;
+    padding-top: 55px;
+}
+
+// Top footer
+.top-footer {
+    @include clearfix();
+    background-color: $light;
+    padding: 75px 0;
+    margin-top: 75px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    & .box {
+        @include column(4);
+        text-align: center;
+        & i {
+            font-size: 1.2em;
+        }
+        & h4 {
+            margin: 15px 0;
+            font-size: 1.6em;
+            text-transform: uppercase;
+            font-family: $font-secondary-light;
+        }
+        & span {
+            display: block;
+            font-size: .9em;
+            color: lighten($color-primary, 20%);
+            font-weight: 500;
+        }
+        & a {
+            margin-top: 15px;
+            display: block;
+            font-size: 12px;
+        }
+        & .button {
+            display: inline-block;
+            font-size: 10px;
+        }
+    }
+}
+
+.box-footer {
+    @include column(3);
+    & li {
+        margin-bottom: 15px;
+        & h4 {
+            font-family: $font-secondary-light;
+            text-transform: uppercase;
+            font-size: 1.6em;
+            color: $light;
+            margin-bottom: 20px;
+            & a {
+                color: #e74550;
+            }
+        }
+        & a {
+            color: lighten($color-primary, 40%);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        & span {
+            color: lighten($color-primary, 30%);
+        }
+        & form {
+            & input[type="email"] {
+                display: block;
+                padding: 10px 20px;
+                border: 1px solid #fff;
+                width: 100%;
+                margin-bottom: 20px;
+                border-radius: 360px;
+                outline: none;
+                font-weight: bold;
+            }
+            & input[type="submit"] {
+                display: block;
+            } 
+        }
+    }
+}
+
+.social-footer {
+    & h4 {
+        text-transform: uppercase;
+        font-size: 1.6em;
+        color: $light;
+        margin-bottom: 20px;
+    }
+    & a {
+        display: inline-block;
+        color: $light;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $light;
+        border-radius: 8px;
+        position: relative;
+        margin-bottom: 20px;
+        & i {
+            position: absolute;
+            top: 10px;
+            font-size: 15px;
+            left: 12px;
+        }
+        &:hover {
+            transition: all .2s ease-in-out;
+            color: $light;
+            background-color: darken($color-primary, 5%);
+            border-color: darken($color-primary, 10%)
+        }
+    }
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: rgba(255, 255, 255, .04);
+    margin: 0;
+}
+
+.sub-info {
+    padding: 20px 0;
+    @include clearfix();
+    & ul, div {
+        @include column(6);
+        & li {
+            display: inline-block;
+            margin-right: 20px;
+            & a {
+                color: lighten($color-primary, 40%);
+                font-weight: 400;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+.developer {
+    text-align: right;
+    font-size: .8em;
+    color: lighten($color-primary, 40%);
+    & a {
+        color: $light;
+    }
+    & img {
+        opacity: .5;
+    }
+}

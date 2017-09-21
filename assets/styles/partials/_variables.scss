@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+// Font-family
+$font-family: "proxima-nova",sans-serif;
+
+
+// Oswald font family
+$font-secondary-light: 'Oswald Light';
+$font-secondary-regular: 'Oswald Regular';
+$font-secondary-bold: 'Oswald Bold';
+
+// Playfair Display
+
+$font-cursive: 'Playfair Display';
+
+// Font-size
+$font-size: 100%;
+
+// Font-weight
+$font-weight: 300;
+
+// Container width
+$wrapperWidth: 1280px; 
+
+// Azul escuro
+$color-primary: #24292e; 
+
+// Cinza escuro
+$color-secondary: #103357; 
+
+// Cinza
+$color-text: #333333;
+
+// Cinza claro hover
+$color-link: lighten($color-secondary, 20%);
+
+// Vermelho
+$color-link-red: #e74550;
+
+// Body background cinza claro
+$body-background: #f4f4f4;
+
+// Light color
+$light: #ffffff;
+
+// Amarelo
+$yellow: #edb62f;
+
+// vermelho
+
+$red: #ed1c24;
+
+// Selection
+$select: lighten($color-text, 50%);

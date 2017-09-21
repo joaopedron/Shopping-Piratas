@@ -1,0 +1,482 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+/* sections */
+.lojas,
+.cineshow {
+    text-align: center;
+}
+
+/* titulo home */
+.sectionTitle {
+    > h1 {
+        font-size: 2.6em;
+    }
+    font-family: $font-secondary-light;
+    text-transform: uppercase;
+    text-align: center;
+    /* box configuration */
+    margin: 70px 0;
+}
+
+.tagline {
+    font-size: .8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.link-more {
+    margin-bottom: 70px;
+}
+
+.destaque{
+    position: relative;
+    & .owl-prev,
+      .owl-next {
+            display: block;
+            opacity: 0;
+            padding: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 45%;
+            transition: all .5s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: $light;
+    }
+    & .owl-next {
+        right: 0px;
+    }
+
+    & .owl-prev {
+        left: 0px;
+    }
+}
+
+.destaque {
+    &:hover {
+        & .owl-prev,
+          .owl-next {
+            opacity: 1;
+          }
+    }
+}
+
+.slider-home {
+
+}
+
+// List store hover and blur effect
+.list-store {
+    position: relative;
+    & li {
+        & a {
+            & figure {
+                & img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all .5s ease-in-out;
+                    box-shadow: inset 0px 0px 40px 40px #DBA632;
+                }
+                & figcaption {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    padding: 2em;
+                }
+                display: block;
+                min-height: 450px;
+                padding: 200px 20px;
+                position: relative;
+                transition: all .5s ease-in-out;
+                font-family: $font-secondary-bold;
+                & h1 {
+                    text-transform: uppercase;
+                    opacity: 0;
+                    padding-top: 50%;
+                }
+                & .tag-location {
+                    opacity: 0;
+                }
+                &:hover {
+                    background-color: $color-secondary;
+                    & h1 {
+                        color: $light;
+                        opacity: 1;
+                    }
+
+                    & .tag-location {
+                        color: $light;
+                        opacity: 1;
+                    }
+
+                    & img {
+                        transition: all .5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+// # List store hover and blur effect
+
+.tag-location {
+    font-family: "proxima-nova", sans-serif;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: 1px;
+}
+
+
+.list-store,
+.owl-movie {
+    margin-bottom: 70px;
+}
+
+/* Cineshow section */
+.cineshow {
+    background-color: $color-secondary;
+    & .sectionTitle {
+        color: $light;
+    }
+}
+
+.list-movie {
+    & li {
+        & a {
+            display: block;
+            background-color: $color-secondary;
+            & img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    -webkit-transition: all 0.5s 0.5s ease-in-out;
+    transition: all .5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+}
+
+.modal.active{
+    -webkit-transition: all .5s ease-in-out;
+    opacity: 1;
+    z-index: 10;
+}
+
+.modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -13% 0 0 -31%;
+    z-index: 10;    
+    background-color: $color-primary;
+    text-align: left;
+    max-width: 900px;
+    padding: 20px;
+    @include clearfix();
+    & img {
+        display: block;
+        width: 30%;
+        float: left;
+    }
+
+    > .info {
+        width: 70%;
+        float: left;
+        padding: 0 30px;
+        position: relative;
+        & .title-box {
+            font-family: $font-secondary-regular;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        & .meta-box {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            margin: 15px 0;
+            & li {
+                display: inline-block;
+                margin-right: 10px;
+                & a {
+                    display: block;
+                    font-weight: bold;
+                    font-size: .7em;
+                    color: $light;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    & i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        & .description-box {
+            font-size: .8em;
+            line-height: 1.7;
+            font-weight: bold;
+        }
+        & .modal-close {
+            padding: 15px;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            cursor: pointer;
+            font-size: 1.2em;
+            &:hover {
+                color: lighten($color-secondary, 30%);
+            }
+        }
+    }
+}
+.tag {
+    color: green;
+    border: 1px solid green;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-size: .7em;
+    margin-bottom: 15px;
+    display: inline-block;  
+}
+
+.dublado {
+    border-color: blue;
+    color: blue;
+}
+
+.legendado {
+    color: red;
+    border-color: red;
+}
+
+.time {
+    border: none;
+    color: lighten($color-primary, 20%);
+}
+
+.lojas,
+.cineshow {
+    & .owl-prev,
+      .owl-next {
+            display: block;
+            opacity: 0;
+            padding: 20px;
+            cursor: pointer;
+            position: absolute;
+            top: 45%;
+            transition: all .5s ease-in-out;
+        }
+    & .owl-next {
+        right: -80px;
+    }
+
+    & .owl-prev {
+        left: -80px;
+    }
+}
+
+.lojas,
+.cineshow {
+    &:hover {
+        .owl-prev,
+        .owl-next {
+            opacity: 1;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
+
+.cineshow {
+    color: $light;
+}
+
+// Centro Gastronomico
+
+.food {
+    @include clearfix();
+}
+
+.slider-food {
+    width: 60%;
+}
+
+.custom-search {
+    width: 40%;
+    background-color: #edb62f;
+    min-height: 479px;
+    padding: 50px;
+    text-align: center;
+    & h1 {
+        font-family: $font-secondary-light;
+        text-transform: uppercase;
+    }
+    & p { 
+        font-family: $font-cursive;
+        font-style: italic;
+        margin: 20px 0;
+        font-size: 25px;
+        line-height: 1.2;
+    }
+}
+
+.slider-food,
+.custom-search {
+    display: block;
+    float: left;
+}
+
+
+// Instagram feed
+
+.feed-instagram {
+    @include clearfix();
+}
+
+#instagram {
+    @include clearfix();
+    & a {
+        display: inline-block;
+        max-width: 16.6666667%;
+        transition: all .2s ease-in-out;
+        & img {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            transition: all .2s ease-in-out;
+        }
+        &:hover {
+            transition: all .2s ease-in-out;
+            & img {
+                -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(0%);
+            }
+        }
+    }
+}
+
+.stores {
+    & h4 {
+        text-transform: uppercase;
+        font-family: $font-secondary-light;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+    }
+}
+
+.entry-store {
+    @include column(8);
+}
+
+.stores {
+    & ul {
+        & li {
+            margin-bottom: 10px;
+            & a {
+                font-size: .9em;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.store-box {
+    border: 1px solid rgba(0, 0, 0, .09);
+    padding: 35px;
+    margin-bottom: 20px;
+    & a {
+        display: inline-block;
+    }
+    & h1 {
+        font-family: $font-secondary-light;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &:hover {
+        background-color: $light;
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, .02);
+        cursor: pointer;
+    }
+}
+
+.store-info-box {
+    & span {
+        display: block;
+        text-transform: uppercase;
+        font-size: .7em;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & i {
+            margin-right: 5px;
+        }
+    }
+}
+
+.title-page {
+    background-color: $color-primary;
+    padding: 5rem 0;
+    margin-bottom: 55px;
+    & h1 {
+        @include column(12);
+        color: $light;
+        font-family: $font-secondary-bold;
+        text-transform: uppercase;
+        font-size: 2.4em;
+        text-shadow: 0px  2px 0px rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+.not-found {
+    text-align: center;
+}
+
+.erro-404 {
+    font-size: 15em;
+    font-family: $font-secondary-bold;
+}
+
+.title-404 {
+    background: $color-primary;
+}
+
+.entry-404 {
+    
+    & form {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+        & input[type="search"] {
+            border: 0;
+            box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, .05);  
+            &:focus {
+                box-shadow: none; 
+            }
+        }
+    }
+}
+

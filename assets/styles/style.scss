@@ -1,0 +1,41 @@
+/*!
+Theme Name: Shopping Piratas
+Theme URI: http://www.shoppingpiratas.com.br
+Author: Alternativa Serviços
+Author URI: https://alternativasv.com.br
+Description: Site oficial – Shopping Piratas
+Version: 1.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Domain Path: /languages/
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "partials/fonts";
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/resets";
+
+@import "partials/h5bp-global";
+@import "partials/general";
+@import "partials/grid";
+@import "partials/spritesheet";
+
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+
+@import "partials/menus";
+@import "partials/page-post";
+
+@import "partials/page-home";
+@import "partials/page-blog";
+
+@import "partials/widgets";
+@import "partials/comments";
+@import "partials/forms";
+
+@import "partials/helpers";
+@import "partials/print";

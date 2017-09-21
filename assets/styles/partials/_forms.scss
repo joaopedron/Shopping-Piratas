@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+.button {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 8px 25px;
+    border-radius: 360px;
+    font-size: .6em;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+    letter-spacing: 1px;
+    transition: all .2s ease-in-out;
+    font-weight: 600;
+    &:hover {
+        color: $light;
+        background-color: $color-secondary;
+    }
+}
+
+.button.light {
+    border: 1px solid $light;
+    color: $light;
+    background: none;
+    &:hover {
+        background-color: $light;
+        color: $color-secondary;
+        border-color: $color-secondary;
+        cursor: pointer;
+    }
+}
+
+input[type="email"],
+input[type="text"],
+input[type="search"] {
+    display: block;
+    width: 100%;
+    border: 1px solid $light;
+    border-radius: 360px;
+    padding: 10px 15px;
+    font-weight: bold;
+    margin: 15px 0;
+    outline: none;
+}

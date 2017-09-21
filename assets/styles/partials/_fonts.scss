@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Web Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Oswald Bold';
+    src: url('assets/fonts/oswald-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/oswald-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald Light';
+    src: url('assets/fonts/oswald-light-webfont.woff2') format('woff2'),
+         url('assets/fonts/oswald-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald Regular';
+    src: url('assets/fonts/oswald-regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/oswald-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
