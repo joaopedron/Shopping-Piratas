@@ -141,7 +141,8 @@
 
 /* Cineshow section */
 .cineshow {
-    background-color: $color-secondary;
+    background: $color-secondary url("http://localhost/shopping/wp-content/uploads/2017/09/box-cine-show.png") no-repeat;
+    background-size: cover;
     & .sectionTitle {
         color: $light;
     }

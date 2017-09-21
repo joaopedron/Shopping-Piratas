@@ -85,7 +85,8 @@ get_header(); ?>
                 </div>
             </section>
             <!-- #instagram feed -->
-
+            
+            
             <!-- blog -->
             <section class="blog">
                 <div class="wrapper">

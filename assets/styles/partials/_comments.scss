@@ -1,9 +1,11 @@
 /* ==========================================================================
    Comments
    ========================================================================== */
+$border-size: 3px;
 
 .effect-bubba:hover img {
-	opacity: 0.3;
+	opacity: 0.1;
+	filter: blur(2px);
 }
 
 .effect-bubba figcaption::before,
@@ -20,16 +22,16 @@
 }
 
 .effect-bubba figcaption::before {
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
+	border-top: $border-size solid #fff;
+	border-bottom: $border-size solid #fff;
 	-webkit-transform: scale(0,1);
 	-ms-transform: scale(0,1);
 	    transform: scale(0,1);
 }
 
 .effect-bubba figcaption::after {
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
+	border-right: $border-size solid #fff;
+	border-left: $border-size solid #fff;
 	-webkit-transform: scale(1,0);
 	-ms-transform: scale(1,0);
 	    transform: scale(1,0);

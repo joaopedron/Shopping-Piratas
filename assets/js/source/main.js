@@ -9,7 +9,7 @@
      $('.owl-home').owlCarousel({
         stagePadding: 0,
         items: 1,
-        loop:true,
+        loop: true,
         margin:0,
         singleItem:true,
         autoplay: true,
@@ -22,7 +22,7 @@
 
 
     $('.owl-store').owlCarousel({
-        loop: false,
+        loop: true,
         margin: 30,
         nav: true,
         navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"],
@@ -40,7 +40,7 @@
     });
 
     $('.owl-movie').owlCarousel({
-        loop: false,
+        loop: true,
         margin: 30,
         nav: true,
         navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"],
@@ -58,7 +58,7 @@
     });
 
     $('.owl-food').owlCarousel({
-        loop: false,
+        loop: true,
         margin: 30,
         nav: true,
         navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"],

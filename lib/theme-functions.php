@@ -329,7 +329,8 @@ function sliderHome() {
 function listStore() {
 	$args = array(
 		'post_type'     		=> 'lojas' ,
-		'posts_per_page'     	=> '15',
+		'category_name'			=> 'ancoras',
+		'posts_per_page'     	=> '10',
 		'orderby'				=> 'title',
 		'order'					=> 'ASC'
 );

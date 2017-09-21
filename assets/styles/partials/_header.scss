@@ -64,6 +64,28 @@
         }
     }
 }
+
+.site-menu {
+    & .current-menu-item {
+        & a {
+            color: lighten($color-secondary, 60%) !important;
+            & span {
+                position: absolute;
+                display: block;
+                height: 1px;
+                width: 100%;
+                left: 0;
+                bottom: -5px;
+                background-color: lighten($color-secondary, 60%);
+                transform: scaleX(1);
+                transition: .3s ease-out;
+                border-radius: 25px;
+            }
+        }
+    }
+}
+
+
 // # menu header changes
 .mega-menu {
 

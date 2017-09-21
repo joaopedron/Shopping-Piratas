@@ -520,7 +520,8 @@ body:after {
 
 /* Cineshow section */
 .cineshow {
-  background-color: #103357;
+  background: #103357 url("http://localhost/shopping/wp-content/uploads/2017/09/box-cine-show.png") no-repeat;
+  background-size: cover;
 }
 .cineshow .sectionTitle {
   color: #ffffff;
@@ -946,6 +947,25 @@ body:after {
           transform: scaleX(1);
   -webkit-transition: .3s ease-out;
           transition: .3s ease-out;
+}
+
+.site-menu .current-menu-item a {
+  color: #aaccef !important;
+}
+.site-menu .current-menu-item a span {
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+  background-color: #aaccef;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: .3s ease-out;
+          transition: .3s ease-out;
+  border-radius: 25px;
 }
 
 .menu-mobile {
@@ -1621,7 +1641,9 @@ object {
    Comments
    ========================================================================== */
 .effect-bubba:hover img {
-  opacity: 0.3;
+  opacity: 0.1;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 
 .effect-bubba figcaption::before,
@@ -1638,16 +1660,16 @@ object {
 }
 
 .effect-bubba figcaption::before {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
   -webkit-transform: scale(0, 1);
   -ms-transform: scale(0, 1);
   transform: scale(0, 1);
 }
 
 .effect-bubba figcaption::after {
-  border-right: 1px solid #fff;
-  border-left: 1px solid #fff;
+  border-right: 3px solid #fff;
+  border-left: 3px solid #fff;
   -webkit-transform: scale(1, 0);
   -ms-transform: scale(1, 0);
   transform: scale(1, 0);
