@@ -17,7 +17,7 @@ get_header(); ?>
         <section id="sidebar-store" class="sidebar stores">
             <h4>Categorias</h4>
             <?php 
-                $args = array('parent' => 17);
+                $args = array('parent' => 16);
                 $categories = get_categories( $args );
                 echo '<ul>';
                 foreach($categories as $category) { 

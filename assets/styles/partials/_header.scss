@@ -68,7 +68,6 @@
 .site-menu {
     & .current-menu-item {
         & a {
-            color: lighten($color-secondary, 60%) !important;
             & span {
                 position: absolute;
                 display: block;
@@ -76,7 +75,7 @@
                 width: 100%;
                 left: 0;
                 bottom: -5px;
-                background-color: lighten($color-secondary, 60%);
+                background-color: #fff;
                 transform: scaleX(1);
                 transition: .3s ease-out;
                 border-radius: 25px;

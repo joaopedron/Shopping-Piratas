@@ -49,27 +49,17 @@ get_header(); ?>
             <div class="wrapper">
                 <!-- centro gastronomico -->
                 <section class="food">
-                    <header class="sectionTitle">
-                        <h1>Centro Gastronômico</h1>
-                        <span class="tagline">O melhor da gastronomia está aqui!</span>
-                    </header>
                     <!-- slider food -->
                     <div class="slider-food">
-                        <!-- rev slider food -->
-                        <?php sliderFood(); ?>
-                        <!-- #rev slider food -->
+                        <div class="food-banner">
+                            <div class="food-texts">
+                                <h1>Centro Gastronômico</h1>
+                                <span class="tagline">O melhor da gastronomia está aqui!</span>
+                                <a href="<?= esc_url( home_url( '/gastronomia' ) ); ?>" class="button-food">Explore nossos sabores</a>
+                            </div>
+                        </div>
                     </div>
                     <!-- #slider food -->
-
-                    <!-- custom search food -->
-                    <div class="custom-search">
-                        <h1>Encontre um restaurante</h1>
-                        <p>“Nossas opções gatstronomicas são simplesmente as melhores <br> da costa verde.”</p>
-                        <!-- buttons -->
-                        <a href="<?php site_url(); ?>/gastronomia/" class="button">Descruba novos sabores</a>
-                        <!-- buttons -->
-                    </div>
-                    <!-- #custom search food -->
                 </section>
                 <!-- #centro gastronomico -->
             </div><!-- #wrapper -->
@@ -86,6 +76,24 @@ get_header(); ?>
             </section>
             <!-- #instagram feed -->
             
+            <!-- wrapper -->
+            <div class="wrapper">
+                <!-- centro gastronomico -->
+                <section class="food">
+                    <!-- slider food -->
+                    <div class="box-boat">
+                        <div class="banner-boat">
+                            <div class="food-texts">
+                                <h1>Centro Naútico</h1>
+                                <span class="tagline">Tudo que você precisa para sua embarcação</span>
+                                <a href="<?= esc_url( home_url( '/centro-nautico' ) ); ?>" class="button-food">Navegue em nosso mar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- #slider food -->
+                </section>
+                <!-- #centro gastronomico -->
+            </div><!-- #wrapper -->
             
             <!-- blog -->
             <section class="blog">
@@ -97,10 +105,12 @@ get_header(); ?>
                     <!-- list blog -->
                     <?= do_shortcode('[the_grid name="Blog"]'); ?>
                     <!-- #list blog -->
-                    <!-- link more -->
-                    <a href="<?= esc_url( home_url( '/blog' ) ); ?>" class="button link-more">
-                    ver todas
-                    </a><!-- #link more -->
+                    <section class="footer-blog">
+                        <!-- link more -->
+                        <a href="<?= esc_url( home_url( '/blog' ) ); ?>" class="button link-more">
+                        ver todas as novidades
+                        </a><!-- #link more -->
+                    </section>
                 </div>
             </section>
             <!-- #blog -->

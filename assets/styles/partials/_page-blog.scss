@@ -142,9 +142,13 @@
 
 // blog
 
+.footer-blog {
+    text-align: center;
+}
 .blog {
     & .link-more {
-        margin: 0 auto;
+        margin-top: 70px;
+        margin-bottom: 0;
     }
 }
 

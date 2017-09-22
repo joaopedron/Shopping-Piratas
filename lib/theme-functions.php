@@ -604,7 +604,7 @@ function listMovie() {
 			    'title' 	 			=> get_the_title(),
 			    'thumb'					=> get_the_post_thumbnail(),
 			    'legenda'				=> get_field('legenda'),
-			    'imagem'				=> ((get_field('imagem') === "3D") ? get_field('imagem') : false),
+			    'imagem'				=> get_field('imagem'),
 			    'sinopse'				=> get_field('sinopse'),
 			    'trailer'				=> get_field('trailer'),
 			    'link'					=> get_field('link'),

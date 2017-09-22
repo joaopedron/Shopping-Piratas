@@ -548,6 +548,9 @@ body:after {
   transition: all .5s ease-in-out;
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 0;
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
 .modal.active {
@@ -567,6 +570,8 @@ body:after {
   max-width: 900px;
   padding: 20px;
   *zoom: 1;
+  display: table-cell;
+  vertical-align: middle;
 }
 .modal-box:before, .modal-box:after {
   content: "";
@@ -701,7 +706,87 @@ body:after {
 }
 
 .slider-food {
-  width: 60%;
+  width: 100%;
+  position: relative;
+  background: url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/food-box.png") no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  margin: 70px 0;
+  background-position-y: -80px;
+}
+.slider-food img {
+  height: 479px;
+}
+.slider-food .owl-nav {
+  position: absolute;
+}
+.slider-food .owl-nav .owl-prev, .slider-food .owl-nav .owl-next {
+  opacity: 0;
+  position: absolute;
+  top: -250px;
+  background-color: #edb62f;
+  padding: 15px;
+  -webkit-transition: .2s ease-out;
+          transition: .2s ease-out;
+}
+.slider-food .owl-nav .owl-next {
+  left: 722px;
+}
+.slider-food:hover .owl-prev, .slider-food:hover .owl-next {
+  -webkit-transition: .2s ease-out;
+          transition: .2s ease-out;
+  opacity: 1;
+}
+
+.food-banner {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: table;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box-boat {
+  width: 100%;
+  position: relative;
+  background: url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/boat-box.png") no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  margin: 70px 0;
+  background-position-y: -80px;
+}
+
+.banner-boat {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: table;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.food-texts {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Oswald Light";
+  text-transform: uppercase;
+  color: #fff;
+}
+.food-texts > h1 {
+  font-size: 2.6em;
+}
+.food-texts > .button-food {
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 20px;
+  color: #fff;
+}
+.food-texts > .button-food:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .custom-search {
@@ -731,6 +816,8 @@ body:after {
 
 .feed-instagram {
   *zoom: 1;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding-bottom: 140px;
 }
 .feed-instagram:before, .feed-instagram:after {
   content: "";
@@ -949,9 +1036,6 @@ body:after {
           transition: .3s ease-out;
 }
 
-.site-menu .current-menu-item a {
-  color: #aaccef !important;
-}
 .site-menu .current-menu-item a span {
   position: absolute;
   display: block;
@@ -959,7 +1043,7 @@ body:after {
   width: 100%;
   left: 0;
   bottom: -5px;
-  background-color: #aaccef;
+  background-color: #fff;
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
           transform: scaleX(1);
@@ -1050,6 +1134,7 @@ body:after {
   *zoom: 1;
   background-color: #ffffff;
   padding: 75px 0;
+  margin-top: 70px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .top-footer:before, .top-footer:after {
@@ -1467,8 +1552,13 @@ object {
   text-transform: uppercase;
 }
 
+.footer-blog {
+  text-align: center;
+}
+
 .blog .link-more {
-  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 0;
 }
 
 .news {
@@ -1719,7 +1809,7 @@ object {
   padding: 8px 25px;
   border-radius: 360px;
   font-size: .6em;
-  border: 1px solid #103357;
+  border: 2px solid #103357;
   color: #103357;
   letter-spacing: 1px;
   -webkit-transition: all .2s ease-in-out;
@@ -1732,7 +1822,7 @@ object {
 }
 
 .button.light {
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   color: #ffffff;
   background: none;
 }
