@@ -141,6 +141,13 @@
 }
 
 // blog
+
+.blog {
+    & .link-more {
+        margin: 0 auto;
+    }
+}
+
 .news {
     @include column(7);
     > li {

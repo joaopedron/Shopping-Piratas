@@ -12,7 +12,6 @@
     @include clearfix();
     background-color: $light;
     padding: 75px 0;
-    margin-top: 75px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     & .box {
         @include column(4);

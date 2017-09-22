@@ -95,16 +95,12 @@ get_header(); ?>
                         <span class="tagline">Fique por dentro do nosso blog</span>
                     </header>
                     <!-- list blog -->
-                    <?php listBlog(); ?>
+                    <?= do_shortcode('[the_grid name="Blog"]'); ?>
                     <!-- #list blog -->
-                    <!-- featured-image -->
-                    <div class="news-featured">
-                        <div class="block">
-                            <?php firstBlog(); ?>
-                        </div>
-                    </div>
-                    <!-- featured-image -->
-
+                    <!-- link more -->
+                    <a href="<?= esc_url( home_url( '/blog' ) ); ?>" class="button link-more">
+                    ver todas
+                    </a><!-- #link more -->
                 </div>
             </section>
             <!-- #blog -->
