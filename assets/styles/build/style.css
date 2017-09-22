@@ -185,6 +185,8 @@ textarea {
 *,
 :before,
 :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -436,8 +438,7 @@ body:after {
   cursor: pointer;
   position: absolute;
   top: 45%;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   background-color: rgba(0, 0, 0, 0.2);
   color: #ffffff;
 }
@@ -461,16 +462,14 @@ body:after {
   min-height: 450px;
   padding: 200px 20px;
   position: relative;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   font-family: "Oswald Bold";
 }
 .list-store li a figure img {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   box-shadow: inset 0px 0px 40px 40px #DBA632;
 }
 .list-store li a figure figcaption {
@@ -502,8 +501,7 @@ body:after {
   opacity: 1;
 }
 .list-store li a figure:hover img {
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .tag-location {
@@ -664,8 +662,7 @@ body:after {
   cursor: pointer;
   position: absolute;
   top: 45%;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 .lojas .owl-next,
 .cineshow .owl-next {
@@ -681,8 +678,7 @@ body:after {
 .cineshow:hover .owl-prev,
 .cineshow:hover .owl-next {
   opacity: 1;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .cineshow {
@@ -753,19 +749,16 @@ body:after {
 #instagram a {
   display: inline-block;
   max-width: 16.6666667%;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #instagram a img {
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #instagram a:hover {
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #instagram a:hover img {
   -webkit-filter: grayscale(0%);
@@ -934,19 +927,13 @@ body:after {
   left: 0;
   bottom: -5px;
   background-color: #fff;
-  -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transform: scaleX(0);
+  transition: .3s ease-out;
   border-radius: 25px;
 }
 .site-menu ul > li > a:hover span {
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transform: scaleX(1);
+  transition: .3s ease-out;
 }
 
 .site-menu .current-menu-item a {
@@ -960,11 +947,8 @@ body:after {
   left: 0;
   bottom: -5px;
   background-color: #aaccef;
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transform: scaleX(1);
+  transition: .3s ease-out;
   border-radius: 25px;
 }
 
@@ -1018,15 +1002,13 @@ body:after {
 }
 
 .slide, .hide {
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .overlay {
   left: 0;
   top: 50px;
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .overlay.show {
@@ -1157,8 +1139,7 @@ body:after {
   left: 12px;
 }
 .social-footer a:hover {
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   color: #ffffff;
   background-color: #191c20;
   border-color: #0e1011;
@@ -1309,8 +1290,7 @@ object {
   position: relative;
   color: #103357;
   font-size: 1em;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .lojas-info .social-links li a i {
   position: absolute;
@@ -1321,8 +1301,7 @@ object {
   left: 13px;
 }
 .lojas-info .social-links li a:hover {
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   background: #103357;
   color: #ffffff;
 }
@@ -1419,8 +1398,7 @@ object {
 .entry-social > li > a:hover {
   background: none;
   border: 1px solid;
-  -webkit-transition: all .1s linear;
-          transition: all .1s linear;
+  transition: all .1s linear;
 }
 .entry-social > li > .fb > i {
   left: 15px;
@@ -1630,8 +1608,7 @@ object {
   width: 100%;
   border: 2px solid rgba(0, 0, 0, 0.1);
   outline: 0;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .widget_search .search-field:focus {
   border: 2px solid #24292e;
@@ -1642,8 +1619,7 @@ object {
    ========================================================================== */
 .effect-bubba:hover img {
   opacity: 0.1;
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
+  filter: blur(2px);
 }
 
 .effect-bubba figcaption::before,
@@ -1719,8 +1695,7 @@ object {
   border: 1px solid #103357;
   color: #103357;
   letter-spacing: 1px;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   font-weight: 600;
 }
 .button:hover {

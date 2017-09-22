@@ -81,7 +81,7 @@ get_header(); ?>
                         <h1>Siga-nos no instagram</h1>
                         <span class="tagline"><a href="https://instagram.com/shoppingpiratas">@shoppingpiratas</a></span>
                     </header>
-                    <div id="instagram" class="show"></div>
+                    <?= do_shortcode('[the_grid name="Grid Instagram"]'); ?>
                 </div>
             </section>
             <!-- #instagram feed -->
@@ -113,3 +113,4 @@ get_header(); ?>
 	</div><!-- #primary -->
     
 <?php get_footer(); ?>
+

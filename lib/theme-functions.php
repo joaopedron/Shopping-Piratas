@@ -817,6 +817,7 @@ function singleStore() {
         echo "</ul>";
     endif;
 }
+
 /**
  * Extend WordPress search to include custom fields
  *
@@ -872,9 +873,6 @@ function cf_search_distinct( $where ) {
     return $where;
 }
 add_filter( 'posts_distinct', 'cf_search_distinct' );
-
-
-
 
 //
 
