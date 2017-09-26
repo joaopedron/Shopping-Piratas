@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Lojas
+ * Template Name: Contato
  *
  * Displays content for portfolio page layouts
  *
@@ -9,9 +9,9 @@
 
 get_header(); ?>
     
-    <section class="breadcrumb">
+    <section class="title-page title-store">
         <div class="wrapper">
-            <h1>Lojas</h1>
+            <h1>Contato</h1>
         </div>
     </section>
 
@@ -21,8 +21,8 @@ get_header(); ?>
             <?php dynamic_sidebar( 'sidebar-2' ); ?>         
         </section>
         <!-- sidebar -->
-        <section class="entry-store">
-            <?php storeSingle(); ?>
+        <section class="entry-contact">
+            <?php the_content(); ?>
         </section>
     </div>
 

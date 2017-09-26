@@ -12,65 +12,79 @@
  */
 
 get_header(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-    <section class="title-page title-store">
+    <section class="title-store">
         <div class="wrapper">
-            <h1>Lojas</h1>
+            <div class="title-page">
+                <span class="segmento">
+                    <?= the_field("segmento"); ?>
+                </span>
+                <h1><?= get_the_title(); ?></h1>
+                <span class="location">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <?= the_field("localizacao");?>
+                </span>           
+            </div>
         </div>
     </section>
+
     <div id="primary" class="content-area">
         <main id="main" class="site-main-single" role="main">
 
-        <?php while ( have_posts() ) : the_post(); ?>
+        
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="wrapper">
                 <section class="lojas-slider">
                     <?php 
-                    $image = get_field('fotos');
-                    if( !empty($image) ): ?>
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    $images = get_field('fotos');
+                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                    if( $images ): ?>
+                        <ul class="owl-single-lojas owl-carousel">
+                            <?php foreach( $images as $image ): ?>
+                                <li>
+                                    <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
                     <?php endif; ?>
 
-                    <?php if(empty($image)): ?>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/default.jpg" alt="Institucional Shopping Piratas" />
-                    <?php endif; ?>
                 </section>
 
                 <section class="lojas-info">
-                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                    <ul>
-                        <li>
-                            <span>Localização:</span>
-                            <?php the_field("localizacao");     ?>
-                        </li>
-                        <li>
-                            <span>Telefone:</span>
-                            <?php the_field("telefone"); ?>
-                        </li>
-                        <li>
-                            <?php 
+                    <h4>Contatos</h4>
+                    <p><a href="tel:<?= the_field("telefone"); ?>"><?= the_field("telefone"); ?></a></p>
+                    <p><a href="mailto:<?= the_field("e-mail"); ?>"><?= the_field("e-mail"); ?></a></p>
+                    <br>
+                    <h4>Localização</h4>
+                    <p><?= the_field("localizacao");?></p>
+                    
+                    <?php 
+                        $facebook   = get_field("facebook");
+                        $instagram  = get_field("instagram");
+                        $twitter    = get_field("twitter"); 
+                    ?>
 
-                                $web = get_field('website');
+                    <?php if(!empty($facebook) || !empty($instagram) || !empty($twitter)) { ?>
 
-                            ?>
-                        </li>
-                    </ul>
+                        <ul class="social-links">
+                            <li>
+                                <a href="<?= $facebook ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="<?= $instagram ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="<?= $twitter ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
 
-                    <ul class="social-links">
-                        <li>
-                            <a href="<?php the_field("facebook"); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="<?php the_field("instagram"); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="<?php the_field("twitter"); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="mailto:<?php the_field("e-mail"); ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                    <?php } else { ?>
+
+                    <?php } ?>
+    
+
                 </section>
             </div>  
         </article><!-- #post-## -->

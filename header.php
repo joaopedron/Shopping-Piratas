@@ -36,6 +36,9 @@
     
     <!-- Fonte awesome icons -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/styles/font-awesome.min.css">
+
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/styles/simple-line-icons.css">
     
     <!-- Angular CDN -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.min.js"></script>
@@ -101,28 +104,45 @@
             
             <!-- Mega menu -->
             <section class="mega-menu" ng-class="{ hide: !showmenu, slide: showmenu }">
-                
+
+
+
                 <div class="wrapper">
-                    <a href="#" class="menu-close" ng-click="toggleMenu()">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </a>
-                    
-                    <header class="menu-header">
-                        <h1>Navegação</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic architecto autem delectus omnis eveniet consequatur repudiandae, vel ex, beatae quia amet illum deserunt dolores atque natus fuga. Aspernatur, blanditiis, et.</p>
-                    </header>
-                    
-                    <section class="menu-content">
-                        <ul>
-                            <li><a href="#">1-link</a></li>
-                            <li><a href="#">2-link</a></li>
-                            <li><a href="#">3-link</a></li>
-                            <li><a href="#">4-link</a></li>
-                        </ul>
-                    </section>
-        
-                </div>
+                        <div class='search-bar'>
+                            <p>O que você está procurando?</p>
+                            <form action="" class=''>
+                                    <input type="text" placeholder="Lojas, cinema, gastronomia?">
+                                    <i class="fa fa-search"></i>
+                            </form>
+                        </div>
+                        <div class="menu-left">
+                        <!-- menu inner -->
+                        <section class="menu-inner">
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                        </section>
+                        <!-- menu inner -->
+                    </div>
+
+                    <div class="menu-right">
+                        <a href="#" class="menu-close" ng-click="toggleMenu()">
+
+                        <?php if(!is_mobile()): ?>
+                            <i class="icon-close" aria-hidden="true"></i>
+                        <?php endif; ?>
+                        </a>
+                            <ul>
+                                <?php wp_nav_menu(array('theme_location' => 'dropdown-menu-right'));   ?>
+                            </ul>
+                    </div>
                 
+                </div>
+                <?php if(!is_mobile()): ?>
+                    <?php include('inc/top-footer.php'); ?>
+                <?php endif; ?>
+                
+                <?php if(is_mobile()): ?>
+                    <button class='mobile-menu-close'>Fechar</button>
+                <?php endif; ?>
             </section>
             <!-- #mega-menu -->
 

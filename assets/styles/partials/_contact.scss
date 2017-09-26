@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+   .entry-contact {
+   	
+    width: 63%;
+    float: right;
+    @include column(6);
+    & .input-email,
+    & .input-tel {
+    	@include column(6);
+	}
+    & .input-email {
+    	margin-left: 0;
+	}
+	& .input-tel {
+    	margin-right: 0;
+    	float: right;
+	}
+	& .input-name,
+	& .input-subject {
+		margin-bottom: 15px;
+	}
+	& .input-message {
+		width: 100%;
+		height: 150px;
+		textarea{
+			width: 100%;
+    		@include column(12);
+			height: 150px;
+		}
+	}
+	& .input-subject {
+		clear: both;
+	}
+	input[type^='submit'] {
+		display: inline-block;
+	    text-transform: uppercase;
+	    padding: 8px 25px;
+	    border-radius: 360px;
+	    font-size: .6em;
+	    border: 1px solid rgba(0,0,0,.3);
+	    color: #103357;
+	    -webkit-transition: all .2s ease-in-out;
+	    transition: all .2s ease-in-out;
+	    font-weight: 600;
+	    margin-top: 20px;
+	    background-color: #fff;
+	    transition: .3s ease-out;
+	}
+		input[type^='submit']:hover {
+	    background-color: rgba(0,0,0,.1);
+	    transition: .3s ease-out;
+	}
+	input[type=search], 
+   	input[type=email], 
+   	input[type=text],
+   	input[type=tel],
+   	textarea {
+	    border: 1px solid rgba(0,0,0,.3);
+		border: none;
+		border-radius: 25px;
+		outline: none;
+		resize: none;
+		padding: 10px; 
+   		border: 1px solid rgba(0,0,0,.3);
+   		margin: 0;
+   	}
+   	input[type=tel] {
+   		width: 100%;
+   	}
+
+}

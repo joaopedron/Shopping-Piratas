@@ -5,6 +5,13 @@
 .site-header {
     background-color: $color-secondary;
     padding: 30px 0;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .site-branding {
@@ -86,9 +93,6 @@
 
 
 // # menu header changes
-.mega-menu {
-
-}
 
 .menu-mobile {
     @include column(1);
@@ -104,38 +108,58 @@
     }
 }
 
-.breadcrumb {
-    background-color: $color-primary;
-    padding: 40px 0;
-    margin-bottom: 70px;
-}
-
-.breadcrumb-container {
-    & ul {
-        & li {
-            text-transform: uppercase;
-            color: $light;
-            font-weight: bold;
-            & a { 
-                font-size: .8em;
-                color: $light;
-            }
-            .separator {
-                margin: 5px;
-            }
-        }
-    }
-}
-
 // Dropdown mega menu
 
 .mega-menu {
     width: 100%;
     position: absolute;
-    background-color: pink;
+    background: $color-primary url('http://shoppingpiratas.com.br/wp-content/uploads/2017/09/foto-mega-menu.jpg') no-repeat;
+    background-size: cover;
     height: 100vh;
     z-index: 14;
-    top: -110%;
+    top: -800%;
+    padding: 85px 0;
+    & p {
+        color: #fff;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    & .search-bar {
+        @include column(12);
+        position: relative;
+        margin-bottom: 50px;
+        & input {
+            width: 100%;
+            border-radius: 360px;
+        }
+        & .fa {
+            background-color: #fff;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            height: auto;
+            display: block;
+            padding: 10.5px;
+            position: absolute;
+            top: 0;
+            right: 5px;
+            border-radius: 0 360px 360px 0;
+        }
+    }
+    form {
+        padding-bottom: 10px;  
+        top: 0;
+        width: 100%;
+        display: block;
+        position: relative;
+    
+    }
+    & .top-footer {
+        margin-top: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;        
+    }
 }
 
 .mega-menu.slide {
@@ -146,3 +170,82 @@
 
 .overlay{left:0;top:50px;transition: all 0.2s ease;}
 .overlay.show{position:fixed;left:50%;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.8);z-index:9999}
+
+
+.menu-left {
+    @include column(6);
+    & ul {
+        & li {
+            margin-bottom: 20px;
+            width: fit-content;
+            & a {
+                position: relative;
+                font-size: 3em;
+                text-transform: uppercase;
+                font-family: $font-secondary-light;
+                color: $light;
+                & span {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    height: 2px;
+                    width: 0%;
+                    background-color: #fff;
+                    transition: .3s;
+                }
+            }
+            &:hover span{
+                width: 100%;
+                background-color: $light;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.menu-right {
+    float: right;
+    width: 50%;
+    & .menu-close {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 25px;
+        & i {
+            font-size: 25px;
+            color: #fff;
+        }
+    }
+    & ul {
+        @include column(12);
+        & li {
+            @include column(6);
+            font-family: $font-secondary-light;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 48px;
+            text-transform: uppercase;
+            & a {
+                position: relative;
+                color: #fff;
+                transition: .3s ease-out;
+                & span {
+                    display: block;
+                    position: absolute;
+                    bottom: -4px;
+                    height: 1px;
+                    width: 0%;
+                    background-color: #fff;
+                    transition: .3s;
+                }
+            }
+            &:hover span{
+                width: 100%;
+                background-color: $light;
+                transition: .3s;
+            }
+        }
+    }
+}
+// #mega-menu

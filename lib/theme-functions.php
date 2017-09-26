@@ -361,6 +361,9 @@ function listStore() {
 
 
 
+
+
+
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
   if (empty($pagerange)) {
@@ -417,6 +420,57 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
     echo "</nav>";
   }
 
+}
+
+function listCategory() {
+
+    $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+    $currentUrl = $_SERVER['REQUEST_URI'];
+    $currentCategory = basename($currentUrl);
+
+	$args = array(
+		'post_type'     		=>	'lojas' ,
+		'posts_per_page' 		=>	5,
+		'orderby'				=>	'title',
+		'order'					=>	'ASC',
+		'category_name'			=>  $currentCategory,
+		'paged' 				=>	$paged
+);
+
+ 	/* Added $paged variable */
+
+	$exec = new WP_Query($args);
+	
+	if($exec->have_posts()):
+		echo '<ul class="single-store">';
+		while($exec->have_posts()):
+			$exec->the_post();
+			$categories = get_the_category($post->ID);
+				echo "<li class='store-box'>";
+					echo '<a href=" '. get_the_permalink() .' ">';
+						echo '<h1>';
+							echo the_title();
+						echo '</h1>';
+					echo "</a>";
+
+					echo '<div class="store-info-box">';
+						echo '<span>';
+							echo '<i class="fa fa-map-marker" aria-hidden="true"></i>';
+							echo the_field('localizacao');
+						echo '</span>';
+						echo '<span>';
+							echo $categories[0]->name;
+						echo '</span>';
+					echo '</div>';
+					
+				echo "</li>";
+		endwhile;
+		echo '</ul>';
+		if (function_exists(custom_pagination)) {
+			custom_pagination($exec->max_num_pages,"",$paged);
+		}
+	endif;
 }
 
 function storeSingle() {
@@ -588,17 +642,17 @@ function listMovie() {
 
 	if($exec->have_posts()):
 		$count = 0;
-		echo '<ul class="owl-carousel owl-movie list-movie">';
+		echo '<div class="owl-carousel owl-movie list-movie">';
 		while($exec->have_posts()):
 			$exec->the_post();
-			echo '<li>';
+			echo '<div>';
 				echo '<a href="javascript:void(0)" id="link-movie" data-item="'.$count.'">';
 					if ( has_post_thumbnail() ) {
 						the_post_thumbnail();
 					}
 				echo "</a>";
 
-			echo "</li>";
+			echo "</div>";
 			$count++;
 			$post_data[] = array(
 			    'title' 	 			=> get_the_title(),
@@ -614,7 +668,7 @@ function listMovie() {
 		
 		$dataJs = json_encode( $post_data );
 
-		echo '</ul>';
+		echo '</div>';
 		echo '
 			<div data-modal class="modal">
 				<div class="wrapper">
@@ -876,3 +930,11 @@ add_filter( 'posts_distinct', 'cf_search_distinct' );
 
 //
 
+function menus(){
+	register_nav_menus(
+		array(
+			'dropdown-menu-right' => __('Menu dropdown direita'),
+		)
+	);
+}
+add_action('init', 'menus');

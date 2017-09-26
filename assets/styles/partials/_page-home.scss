@@ -4,26 +4,104 @@
 
 
 .lojas-slider {
-    @include column(7);
+    @include column(6);
 }
+
+
+.lojas-slider {
+    position: relative;
+    & img {
+        max-width: 100%;
+    }
+}
+
+// slider single lojas
+.owl-single-lojas,
+.lojas {
+    & .owl-prev, .owl-next {
+        opacity: 1;
+        background-color: $color-secondary;
+        & i {
+            color: $light;
+        }
+        &:hover {
+            background-color: darken($color-secondary, 10%);
+        }
+    }
+}
+
+.cineshow {
+    & .owl-prev, .owl-next {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+        & i {
+            color: $light;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+.owl-single-lojas {
+    & .owl-prev {
+        left: -83px;
+    }
+}
+
+.owl-single-lojas {
+    & .owl-next {
+        right: -83px;
+    }
+}
+
+.owl-single-lojas {
+    & .owl-dots {
+        text-align: center;
+        bottom: 15px;
+        position: absolute;
+        width: 100%;
+        & .owl-dot {
+            display: inline-block;
+            background-color: $light;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            & span {
+                display: block;
+            }
+            &.active {
+                background-color: $color-secondary;
+            }
+            &:hover {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+
+//end slider single lojas
 
 .lojas-info {
     @include column(5);
+    @include push(1);
 }
 
-.lojas-slider {
-    & img {
-        border: 15px solid $light;
-    }
-}
 
 .lojas-info {
     text-align: left;
     padding-left: 50px;
-    & h1 {
+    & h4 {
+        font-size: 1.4em;
+        text-transform: uppercase;
+        font-family: $font-secondary-regular;
         margin-bottom: 20px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: $color-primary;
+    }
+    & p {
+        margin: 5px 0;
+        font-weight: 400;
     }
 }
 

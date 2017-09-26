@@ -6,7 +6,7 @@
 
 get_header(); ?>
     
-    <section class="title-page title-store">
+    <section class="breadcrumb">
         <div class="wrapper">
             <h1><?php single_cat_title(); ?></h1>
         </div>

@@ -6,6 +6,27 @@
     $('.menu').find('a').append('<span></span>');
     // # header main menu underline
 
+    // Mega-menu hover effect
+    $('.menu-right').find('a').append('<span></span>');
+    // # Mega-menu hover effect
+
+    // Mega-menu hover effect
+    $('.menu-left').find('a').append('<span></span>');
+    // # Mega-menu hover effect
+
+    // Parallax effect food-box & box-boat
+    $(window).scroll(function(){
+        var t = $(window).scrollTop();
+        t *= 0.03;
+        var yPosFood = -40 + t;
+        var yPosBoat = -100 + t;
+        $('.slider-food').css({'background-position-y' : yPosFood+'%'});
+        $('.box-boat').css({'background-position-y' : yPosBoat+'%'});
+    });
+    // # Parallax effect food-box & box-boat
+
+
+
      $('.owl-home').owlCarousel({
         stagePadding: 0,
         items: 1,
@@ -17,7 +38,7 @@
         autoplayHoverPause: true,
         nav:true,
         pagination: true,
-        navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"]
+        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"]
     });
 
 
@@ -25,7 +46,7 @@
         loop: true,
         margin: 30,
         nav: true,
-        navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"],
+        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
         responsive:{
             0:{
                 items: 1
@@ -43,7 +64,7 @@
         loop: true,
         margin: 30,
         nav: true,
-        navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"],
+        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
         responsive:{
             0:{
                 items: 1
@@ -57,23 +78,29 @@
         }
     });
 
-    $('.owl-food').owlCarousel({
+    $('.owl-single-lojas').owlCarousel({
         loop: true,
         margin: 30,
+        pagination: true,
         nav: true,
-        navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"],
+        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
         responsive:{
             0:{
                 items: 1
             },
             600:{
-                items: 3
+                items: 1
             },
             1000:{
-                items: 3
+                items: 1
             }
         }
     });
+
+    
+
+
+
 
 
     var feed = new Instafeed({
@@ -115,9 +142,6 @@
         },
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
-
-
-
 
 
 })(jQuery);

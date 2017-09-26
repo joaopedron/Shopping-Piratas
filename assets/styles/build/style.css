@@ -427,6 +427,7 @@ body:after {
 
 .destaque {
   position: relative;
+  padding-top: 120px;
 }
 .destaque .owl-prev,
 .destaque .owl-next {
@@ -709,10 +710,10 @@ body:after {
   width: 100%;
   position: relative;
   background: url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/food-box.png") no-repeat;
-  background-size: cover;
+  background-size: 100%;
   min-height: 400px;
   margin: 70px 0;
-  background-position-y: -80px;
+  background-position-x: center;
 }
 .slider-food img {
   height: 479px;
@@ -751,10 +752,10 @@ body:after {
   width: 100%;
   position: relative;
   background: url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/boat-box.png") no-repeat;
-  background-size: cover;
+  background-size: 100%;
   min-height: 400px;
   margin: 70px 0;
-  background-position-y: -80px;
+  background-position-x: center;
 }
 
 .banner-boat {
@@ -921,21 +922,50 @@ body:after {
   margin-right: 5px;
 }
 
-.title-page {
+.title-store,
+.breadcrumb {
   background-color: #24292e;
   padding: 5rem 0;
   margin-bottom: 55px;
+  margin-top: 120px;
+}
+
+.title-page {
+  display: inline;
+  float: left;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 .title-page h1 {
+  font-family: "Oswald Bold";
+  font-size: 3em;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+}
+
+.breadcrumb h1 {
   display: inline;
   float: left;
   width: 98.2456140351%;
   margin: 0 0.8771929825%;
-  color: #ffffff;
-  font-family: "Oswald Bold";
+  color: #fff;
   text-transform: uppercase;
-  font-size: 2.4em;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Oswald Bold";
+  font-size: 3em;
   text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.location,
+.segmento {
+  display: block;
+  letter-spacing: 1.4px;
+  font-size: .8em;
+  font-weight: 400;
 }
 
 .not-found {
@@ -964,12 +994,23 @@ body:after {
   box-shadow: none;
 }
 
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+  display: block;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
 .site-header {
   background-color: #103357;
   padding: 30px 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .site-branding {
@@ -1069,32 +1110,58 @@ body:after {
   border-radius: 2px;
 }
 
-.breadcrumb {
-  background-color: #24292e;
-  padding: 40px 0;
-  margin-bottom: 70px;
-}
-
-.breadcrumb-container ul li {
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: bold;
-}
-.breadcrumb-container ul li a {
-  font-size: .8em;
-  color: #ffffff;
-}
-.breadcrumb-container ul li .separator {
-  margin: 5px;
-}
-
 .mega-menu {
   width: 100%;
   position: absolute;
-  background-color: pink;
+  background: #24292e url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/foto-mega-menu.jpg") no-repeat;
+  background-size: cover;
   height: 100vh;
   z-index: 14;
-  top: -110%;
+  top: -800%;
+  padding: 85px 0;
+}
+.mega-menu p {
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.mega-menu .search-bar {
+  display: inline;
+  float: left;
+  width: 98.2456140351%;
+  margin: 0 0.8771929825%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.mega-menu .search-bar input {
+  width: 100%;
+  border-radius: 360px;
+}
+.mega-menu .search-bar .fa {
+  background-color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  display: block;
+  padding: 10.5px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  border-radius: 0 360px 360px 0;
+}
+.mega-menu form {
+  padding-bottom: 10px;
+  top: 0;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.mega-menu .top-footer {
+  margin-top: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .mega-menu.slide {
@@ -1120,6 +1187,97 @@ body:after {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
+}
+
+.menu-left {
+  display: inline;
+  float: left;
+  width: 48.2456140351%;
+  margin: 0 0.8771929825%;
+}
+.menu-left ul li {
+  margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.menu-left ul li a {
+  position: relative;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "Oswald Light";
+  color: #ffffff;
+}
+.menu-left ul li a span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #fff;
+  -webkit-transition: .3s;
+          transition: .3s;
+}
+.menu-left ul li:hover span {
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-transition: .3s;
+          transition: .3s;
+}
+
+.menu-right {
+  float: right;
+  width: 50%;
+}
+.menu-right .menu-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px;
+}
+.menu-right .menu-close i {
+  font-size: 25px;
+  color: #fff;
+}
+.menu-right ul {
+  display: inline;
+  float: left;
+  width: 98.2456140351%;
+  margin: 0 0.8771929825%;
+}
+.menu-right ul li {
+  display: inline;
+  float: left;
+  width: 48.2456140351%;
+  margin: 0 0.8771929825%;
+  font-family: "Oswald Light";
+  text-align: left;
+  font-size: 1.2em;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.menu-right ul li a {
+  position: relative;
+  color: #fff;
+  -webkit-transition: .3s ease-out;
+          transition: .3s ease-out;
+}
+.menu-right ul li a span {
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  height: 1px;
+  width: 0%;
+  background-color: #fff;
+  -webkit-transition: .3s;
+          transition: .3s;
+}
+.menu-right ul li:hover span {
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-transition: .3s;
+          transition: .3s;
 }
 
 /* ==========================================================================
@@ -1345,8 +1503,74 @@ object {
 .lojas-slider {
   display: inline;
   float: left;
-  width: 56.5789473684%;
+  width: 48.2456140351%;
   margin: 0 0.8771929825%;
+}
+
+.lojas-slider {
+  position: relative;
+}
+.lojas-slider img {
+  max-width: 100%;
+}
+
+.owl-single-lojas .owl-prev, .owl-single-lojas .owl-next,
+.lojas .owl-prev,
+.lojas .owl-next {
+  opacity: 1;
+  background-color: #103357;
+}
+.owl-single-lojas .owl-prev i, .owl-single-lojas .owl-next i,
+.lojas .owl-prev i,
+.lojas .owl-next i {
+  color: #ffffff;
+}
+.owl-single-lojas .owl-prev:hover, .owl-single-lojas .owl-next:hover,
+.lojas .owl-prev:hover,
+.lojas .owl-next:hover {
+  background-color: #081a2c;
+}
+
+.cineshow .owl-prev, .cineshow .owl-next {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.cineshow .owl-prev i, .cineshow .owl-next i {
+  color: #ffffff;
+}
+.cineshow .owl-prev:hover, .cineshow .owl-next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.owl-single-lojas .owl-prev {
+  left: -83px;
+}
+
+.owl-single-lojas .owl-next {
+  right: -83px;
+}
+
+.owl-single-lojas .owl-dots {
+  text-align: center;
+  bottom: 15px;
+  position: absolute;
+  width: 100%;
+}
+.owl-single-lojas .owl-dots .owl-dot {
+  display: inline-block;
+  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+.owl-single-lojas .owl-dots .owl-dot span {
+  display: block;
+}
+.owl-single-lojas .owl-dots .owl-dot.active {
+  background-color: #103357;
+}
+.owl-single-lojas .owl-dots .owl-dot:hover {
+  background-color: #103357;
 }
 
 .lojas-info {
@@ -1354,20 +1578,23 @@ object {
   float: left;
   width: 39.9122807018%;
   margin: 0 0.8771929825%;
-}
-
-.lojas-slider img {
-  border: 15px solid #ffffff;
+  margin-left: 9.2105263158%;
 }
 
 .lojas-info {
   text-align: left;
   padding-left: 50px;
 }
-.lojas-info h1 {
+.lojas-info h4 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-family: "Oswald Regular";
   margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #24292e;
+}
+.lojas-info p {
+  margin: 5px 0;
+  font-weight: 400;
 }
 
 .lojas-info ul li {
@@ -1439,6 +1666,7 @@ object {
 
 .featured-image-single {
   margin-bottom: 50px;
+  margin-top: 120px;
 }
 
 .entry-content p {
@@ -1896,5 +2124,479 @@ input[type="search"] {
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 415px) {
+  .site-header {
+    left: -1px;
+    top: 0;
+    width: 101%;
+    position: fixed;
+    z-index: 20;
+    padding: 30px 0 0 0;
+  }
+  .site-header .site-branding {
+    display: inline;
+    float: left;
+    width: 98.2456140351%;
+    margin: 0 0.8771929825%;
+  }
+  .site-header .site-branding .logo-mobile {
+    background: url(assets/images/logo.svg) no-repeat;
+    display: block;
+    margin: 0 auto;
+    height: 72px;
+    text-indent: -999999px;
+    outline: 0;
+    width: 40%;
+  }
+  .site-header .site-menu {
+    padding: 20px 0;
+    background-color: #fff;
+    display: inline;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .site-header .site-menu ul {
+    list-style: none;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .site-header .site-menu ul li {
+    display: inline-block;
+    margin: 0 2px;
+  }
+  .site-header .site-menu ul li a {
+    display: block;
+    font-size: .8em;
+    margin-left: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    padding-right: 4px;
+    color: #103357;
+  }
+  .site-header .site-menu ul li:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .site-header .menu-mobile {
+    display: inline;
+    width: 6.57895%;
+    cursor: pointer;
+    -webkit-cursor: pointer;
+    -moz-cursor: pointer;
+    -o-cursor: pointer;
+    margin: 18px .87719% 0;
+    position: absolute;
+    left: 86%;
+  }
+
+  .title-page {
+    margin-top: 164px;
+  }
+
+  .mega-menu {
+    width: 100%;
+    position: absolute;
+    background-color: #24292e;
+    height: 100vh;
+    z-index: 14;
+    top: -800%;
+    padding: 25px 0;
+  }
+  .mega-menu .search-bar {
+    display: inline;
+    width: 98.2456140351%;
+    position: relative;
+    padding: 0 25px;
+    margin: 0;
+  }
+  .mega-menu .mobile-menu-close {
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .mega-menu.slide {
+    top: 0;
+  }
+
+  .slide, .hide {
+    -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+  }
+
+  .overlay {
+    left: 0;
+    top: 50px;
+    -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+  }
+
+  .overlay.show {
+    position: fixed;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
+
+  .menu-left {
+    display: block;
+    width: 100%;
+  }
+  .menu-left ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-left ul li a {
+    font-size: 2em;
+  }
+  .menu-left ul:hover span {
+    display: none;
+  }
+
+  .menu-right {
+    width: 100%;
+  }
+  .menu-right li {
+    text-align: center;
+  }
+
+  .destaque {
+    margin-top: 45px;
+  }
+
+  .list-store li a figure {
+    min-height: 408px;
+  }
+
+  .lojas .owl-next, .lojas .owl-prev,
+  .cineshow .owl-next,
+  .cineshow .owl-prev {
+    background-color: #24292e;
+    opacity: 1;
+  }
+  .lojas .owl-next i, .lojas .owl-prev i,
+  .cineshow .owl-next i,
+  .cineshow .owl-prev i {
+    color: #ffffff;
+  }
+
+  .lojas .owl-next,
+  .cineshow .owl-next {
+    right: 0;
+  }
+
+  .lojas .owl-prev,
+  .cineshow .owl-prev {
+    left: 0;
+  }
+
+  .custom-search {
+    width: 100%;
+    background-color: #edb62f;
+    min-height: 479px;
+    padding: 50px;
+    color: #b8b8b8;
+  }
+
+  .list-movie,
+  .list-store {
+    padding: 0 25px;
+  }
+
+  .food {
+    padding: 0 20px;
+  }
+
+  .slider-food {
+    width: 100%;
+    position: relative;
+    background-position-x: -240px;
+    background-size: cover;
+  }
+  .slider-food img {
+    max-width: 100%;
+    height: 100%;
+  }
+  .slider-food .owl-nav {
+    display: none;
+  }
+
+  .food-texts {
+    padding: 0 20px;
+  }
+
+  .box-boat {
+    background-position-x: -240px;
+    background-size: cover;
+  }
+
+  .blog {
+    padding: 0 20px;
+  }
+  .blog .news {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+
+  .top-footer .wrapper .box {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0;
+  }
+  .top-footer .wrapper .box:not(:last-child) {
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  footer .box-footer {
+    display: inline;
+    float: left;
+    width: 98%;
+  }
+  footer .box-footer li h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  footer .box-footer .social-footer {
+    width: 129px;
+    margin: 0 auto;
+  }
+  footer .box-footer h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  footer .box-footer span {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  footer .box-footer form {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  footer .box-footer form input[type=submit] {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sub-info {
+    padding: 20px;
+  }
+
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .sidebar.stores {
+    margin: 0;
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .sidebar.stores h4 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .entry-store {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin: 0;
+  }
+  .entry-store .single-store .store-box a {
+    max-width: 100%;
+    display: block;
+  }
+  .entry-store .single-store .store-box a h1 {
+    text-align: center;
+  }
+  .entry-store .single-store .store-box .store-info-box span {
+    display: block;
+    text-transform: uppercase;
+    font-size: .7em;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .custom-pagination {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .custom-pagination .page-num {
+    margin-right: 10px;
+    padding: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .lojas-info {
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    display: block;
+    padding-left: 0;
+  }
+
+  .lojas-slider {
+    width: 100%;
+    margin: 0;
+  }
+
+  .entry-contact {
+    display: inline;
+    width: 100% !important;
+    margin: 0;
+    float: none;
+  }
+  .entry-contact input[type^='submit'] {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 8px 25px;
+    border-radius: 360px;
+    font-size: .6em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: #103357;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    font-weight: 600;
+    margin-top: 20px;
+    background-color: #fff;
+    -webkit-transition: .3s ease-out;
+            transition: .3s ease-out;
+  }
+  .entry-contact input[type^='submit']:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-transition: .3s ease-out;
+            transition: .3s ease-out;
+  }
+  .entry-contact input[type=search],
+  .entry-contact input[type=email],
+  .entry-contact input[type=text],
+  .entry-contact input[type=tel],
+  .entry-contact textarea {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 0;
+  }
+}
+@media (max-width: 375px) {
+  .destaque {
+    margin-top: 45px;
+  }
+}
+@media (max-width: 320px) {
+  .destaque {
+    margin-top: 45px;
+  }
+}
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+.entry-contact {
+  width: 63%;
+  float: right;
+  display: inline;
+  float: left;
+  width: 48.2456140351%;
+  margin: 0 0.8771929825%;
+}
+.entry-contact .input-email, .entry-contact .input-tel {
+  display: inline;
+  float: left;
+  width: 48.2456140351%;
+  margin: 0 0.8771929825%;
+}
+.entry-contact .input-email {
+  margin-left: 0;
+}
+.entry-contact .input-tel {
+  margin-right: 0;
+  float: right;
+}
+.entry-contact .input-name, .entry-contact .input-subject {
+  margin-bottom: 15px;
+}
+.entry-contact .input-message {
+  width: 100%;
+  height: 150px;
+}
+.entry-contact .input-message textarea {
+  width: 100%;
+  display: inline;
+  float: left;
+  width: 98.2456140351%;
+  margin: 0 0.8771929825%;
+  height: 150px;
+}
+.entry-contact .input-subject {
+  clear: both;
+}
+.entry-contact input[type^='submit'] {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 8px 25px;
+  border-radius: 360px;
+  font-size: .6em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #103357;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  font-weight: 600;
+  margin-top: 20px;
+  background-color: #fff;
+  -webkit-transition: .3s ease-out;
+          transition: .3s ease-out;
+}
+.entry-contact input[type^='submit']:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: .3s ease-out;
+          transition: .3s ease-out;
+}
+.entry-contact input[type=search],
+.entry-contact input[type=email],
+.entry-contact input[type=text],
+.entry-contact input[type=tel],
+.entry-contact textarea {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  resize: none;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+.entry-contact input[type=tel] {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
