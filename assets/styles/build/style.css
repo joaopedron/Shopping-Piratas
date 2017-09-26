@@ -1113,8 +1113,10 @@ body:after {
 .mega-menu {
   width: 100%;
   position: absolute;
-  background: #24292e url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/foto-mega-menu.jpg") no-repeat;
+  background: #24292e url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/foto-mega-menu-2.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   height: 100vh;
   z-index: 14;
   top: -800%;
@@ -1138,7 +1140,6 @@ body:after {
   border-radius: 360px;
 }
 .mega-menu .search-bar .fa {
-  background-color: #fff;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1146,7 +1147,7 @@ body:after {
   display: block;
   padding: 10.5px;
   position: absolute;
-  top: 0;
+  top: -2px;
   right: 5px;
   border-radius: 0 360px 360px 0;
 }
@@ -1236,9 +1237,23 @@ body:after {
   right: 0;
   padding: 25px;
 }
+.menu-right .menu-close p {
+  display: table;
+  position: absolute;
+  left: -30px;
+  text-align: right;
+  opacity: 0;
+  -webkit-transition: .3s ease-out;
+          transition: .3s ease-out;
+}
 .menu-right .menu-close i {
   font-size: 25px;
   color: #fff;
+}
+.menu-right .menu-close:hover p {
+  opacity: 1;
+  -webkit-transition: .3s ease-out;
+          transition: .3s ease-out;
 }
 .menu-right ul {
   display: inline;
@@ -2176,7 +2191,7 @@ input[type="search"] {
     font-weight: 500;
     letter-spacing: 1px;
     position: relative;
-    padding-right: 4px;
+    padding-right: 6px;
     color: #103357;
   }
   .site-header .site-menu ul li:not(:last-child) {
@@ -2277,9 +2292,11 @@ input[type="search"] {
 
   .menu-right {
     width: 100%;
+    padding: 0 30px;
   }
-  .menu-right li {
-    text-align: center;
+  .menu-right ul li {
+    font-size: 1em;
+    text-align: left;
   }
 
   .destaque {
@@ -2435,6 +2452,11 @@ input[type="search"] {
     float: left;
     width: 100%;
     margin: 0;
+  }
+  .entry-store .single-store .store-box {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
   }
   .entry-store .single-store .store-box a {
     max-width: 100%;

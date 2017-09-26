@@ -127,7 +127,7 @@
 
                         <?php if(!is_mobile()): ?>
                             <a href="#" class="menu-close" ng-click="toggleMenu()">
-                                <i class="icon-close" aria-hidden="true"></i>
+                                <p>Fechar</p><i class="icon-close" aria-hidden="true"></i>
                             </a>
                         <?php endif; ?>
                             <ul>

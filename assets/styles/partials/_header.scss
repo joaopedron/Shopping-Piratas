@@ -113,8 +113,10 @@
 .mega-menu {
     width: 100%;
     position: absolute;
-    background: $color-primary url('http://shoppingpiratas.com.br/wp-content/uploads/2017/09/foto-mega-menu.jpg') no-repeat;
+    background: $color-primary url('http://shoppingpiratas.com.br/wp-content/uploads/2017/09/foto-mega-menu-2.jpg') no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     z-index: 14;
     top: -800%;
@@ -133,7 +135,6 @@
             border-radius: 360px;
         }
         & .fa {
-            background-color: #fff;
             width: -webkit-fit-content;
             width: -moz-fit-content;
             width: fit-content;
@@ -141,7 +142,7 @@
             display: block;
             padding: 10.5px;
             position: absolute;
-            top: 0;
+            top: -2px;
             right: 5px;
             border-radius: 0 360px 360px 0;
         }
@@ -170,7 +171,7 @@
 
 .overlay{left:0;top:50px;transition: all 0.2s ease;}
 .overlay.show{position:fixed;left:50%;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.8);z-index:9999}
-
+ 
 
 .menu-left {
     @include column(6);
@@ -212,10 +213,23 @@
         top: 0;
         right: 0;
         padding: 25px;
+        & p {
+            display: table;
+            position: absolute;
+            left: -30px;
+            text-align: right;
+            opacity: 0;
+            transition: .3s ease-out;
+        }
         & i {
             font-size: 25px;
             color: #fff;
         }
+        &:hover p {
+            opacity: 1;
+            transition: .3s ease-out;
+        }
+
     }
     & ul {
         @include column(12);
