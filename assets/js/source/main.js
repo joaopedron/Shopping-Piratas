@@ -14,19 +14,6 @@
     $('.menu-left').find('a').append('<span></span>');
     // # Mega-menu hover effect
 
-    // Parallax effect food-box & box-boat
-    $(window).scroll(function(){
-        var t = $(window).scrollTop();
-        t *= 0.03;
-        var yPosFood = -40 + t;
-        var yPosBoat = -100 + t;
-        $('.slider-food').css({'background-position-y' : yPosFood+'%'});
-        $('.box-boat').css({'background-position-y' : yPosBoat+'%'});
-    });
-    // # Parallax effect food-box & box-boat
-
-
-
      $('.owl-home').owlCarousel({
         stagePadding: 0,
         items: 1,

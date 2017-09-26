@@ -118,18 +118,18 @@
                         <div class="menu-left">
                         <!-- menu inner -->
                         <section class="menu-inner">
-                            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+                                <?php wp_nav_menu(array('theme_location' => 'dropdown-menu-left'));   ?>
                         </section>
                         <!-- menu inner -->
                     </div>
 
                     <div class="menu-right">
-                        <a href="#" class="menu-close" ng-click="toggleMenu()">
 
                         <?php if(!is_mobile()): ?>
-                            <i class="icon-close" aria-hidden="true"></i>
+                            <a href="#" class="menu-close" ng-click="toggleMenu()">
+                                <i class="icon-close" aria-hidden="true"></i>
+                            </a>
                         <?php endif; ?>
-                        </a>
                             <ul>
                                 <?php wp_nav_menu(array('theme_location' => 'dropdown-menu-right'));   ?>
                             </ul>
@@ -139,9 +139,9 @@
                 <?php if(!is_mobile()): ?>
                     <?php include('inc/top-footer.php'); ?>
                 <?php endif; ?>
-                
+
                 <?php if(is_mobile()): ?>
-                    <button class='mobile-menu-close'>Fechar</button>
+                    <div class='mobile-menu-close' ng-click="toggleMenu()">Fechar</div>
                 <?php endif; ?>
             </section>
             <!-- #mega-menu -->

@@ -933,6 +933,7 @@ add_filter( 'posts_distinct', 'cf_search_distinct' );
 function menus(){
 	register_nav_menus(
 		array(
+			'dropdown-menu-left' => __('Menu dropdown esquerda'),
 			'dropdown-menu-right' => __('Menu dropdown direita'),
 		)
 	);
