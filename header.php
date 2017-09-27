@@ -92,6 +92,9 @@
 
                 <!-- menu -->
                 <div class="site-menu">
+                    <?php if(!is_mobile()): ?>
+                        <?php get_search_form(); ?>
+                    <?php endif; ?>
                     <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
                 </div>
                 <!-- #menu -->
@@ -110,10 +113,7 @@
                 <div class="wrapper">
                         <div class='search-bar'>
                             <p>O que você está procurando?</p>
-                            <form action="" class=''>
-                                    <input type="text" placeholder="Lojas, cinema, gastronomia?">
-                                    <i class="fa fa-search"></i>
-                            </form>
+                            <?php get_search_form(); ?>
                         </div>
                         <div class="menu-left">
                         <!-- menu inner -->

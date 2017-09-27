@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-    <section class="title-page title-404">
+    <section class="title-page title-404 breadcrumb">
         <div class="wrapper">
             <h1>Página não encontrada</h1>
         </div>
@@ -16,7 +16,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<section class="wrapper">
 				<section class="not-found">
-					
+
 					<header class="page-header">
 						<h1 class="erro-404">404</h1>
 						<h2 class="page-title"><?php _e( 'A página que você está buscando não foi encontrada!', '_asv' ); ?></h2>

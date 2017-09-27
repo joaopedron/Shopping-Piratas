@@ -2,8 +2,7 @@
    Contact
    ========================================================================== */
 
-   .entry-contact {
-   	
+.entry-contact {
     width: 63%;
     float: right;
     @include column(6);
@@ -70,5 +69,4 @@
    	input[type=tel] {
    		width: 100%;
    	}
-
 }

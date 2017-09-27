@@ -92,7 +92,7 @@
                     padding: 2em;
                 }
                 display: block;
-                min-height: 450px;
+                height: 100%;
                 padding: 200px 20px;
                 position: relative;
                 transition: all .5s ease-in-out;
@@ -142,7 +142,7 @@
 
 /* Cineshow section */
 .cineshow {
-    background: $color-secondary url("http://localhost/shopping/wp-content/uploads/2017/09/box-cine-show.png") no-repeat;
+    background: $color-secondary url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/box-cine-show.png") no-repeat;
     background-size: cover;
     & .sectionTitle {
         color: $light;
@@ -190,7 +190,7 @@
     top: 50%;
     left: 50%;
     margin: -13% 0 0 -31%;
-    z-index: 10;    
+    z-index: 10;
     background-color: $color-primary;
     text-align: left;
     max-width: 900px;
@@ -260,7 +260,7 @@
     padding: 4px 10px;
     font-size: .7em;
     margin-bottom: 15px;
-    display: inline-block;  
+    display: inline-block;
 }
 
 .dublado {
@@ -320,7 +320,7 @@
     @include clearfix();
 }
 
-// 
+//
 .slider-food {
     width: 100%;
     position: relative;
@@ -360,7 +360,7 @@
     position: relative;
     display: table;
     height: 450px;
-    background-color: rgba(0, 0, 0, 0.5);                       
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 ///
@@ -380,7 +380,7 @@
     position: relative;
     display: table;
     height: 450px;
-    background-color: rgba(0, 0, 0, 0.4);                       
+    background-color: rgba(0, 0, 0, 0.4);
 }
 ///
 .food-texts {
@@ -419,7 +419,7 @@
         font-family: $font-secondary-light;
         text-transform: uppercase;
     }
-    & p { 
+    & p {
         font-family: $font-cursive;
         font-style: italic;
         margin: 20px 0;
@@ -591,16 +591,16 @@
 }
 
 .entry-404 {
-    
+
     & form {
         display: block;
         width: 300px;
         margin: 0 auto;
         & input[type="search"] {
             border: 0;
-            box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, .05);  
+            box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, .05);
             &:focus {
-                box-shadow: none; 
+                box-shadow: none;
             }
         }
     }
@@ -612,4 +612,32 @@
 
 .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
     display: block;
+}
+
+
+// Search results
+.search-content {
+    @include column(8);
+    float: right;
+    & .entry-title {
+        font-family: $font-secondary-light;
+        font-size: 1.5em;
+        background-color: #f4f4f4;
+        text-align: left;
+        cursor: pointer;
+        padding: 35px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(0,0,0,.1);
+        transition: .3s ease-out;
+        &:hover {
+            box-shadow: 0 0 5px 5px rgba(0,0,0,.02);
+            background-color: $light;
+            transition: .3s ease-out
+        }
+    }
+    & span,
+    & .entry-content,
+    & .essb_break_scroll {
+        display: none;
+    }
 }

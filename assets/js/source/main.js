@@ -1,7 +1,5 @@
 (function($) {
 
-	// all Javascript code goes here
-
     // header main menu underline
     $('.menu').find('a').append('<span></span>');
     // # header main menu underline
@@ -13,6 +11,12 @@
     // Mega-menu hover effect
     $('.menu-left').find('a').append('<span></span>');
     // # Mega-menu hover effect
+
+    // search-bar active effect
+    $('.site-menu').find('i').on('click', function(){
+            $(this).closest('form').toggleClass('search-active');
+        });
+    // # search-bar active effect
 
      $('.owl-home').owlCarousel({
         stagePadding: 0,
@@ -40,6 +44,9 @@
             },
             600:{
                 items: 3
+            },
+            768: {
+                items: 2
             },
             1000:{
                 items: 3
@@ -84,7 +91,7 @@
         }
     });
 
-    
+
 
 
 
@@ -105,7 +112,7 @@
                     el.className += ' ' + 'show';
             }
     });
-    
+
     window.onload = function() {
         feed.run();
         var _gauges = _gauges || [];
@@ -135,4 +142,3 @@
 
 // 1538602526.c6e7c17.0b51dbebc4dd41528baca6958e539204 acess-token
 // 4404bf0665e1422f97495bc1ca2fda15 ?code=
-

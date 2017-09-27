@@ -185,6 +185,8 @@ textarea {
 *,
 :before,
 :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -437,8 +439,7 @@ body:after {
   cursor: pointer;
   position: absolute;
   top: 45%;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   background-color: rgba(0, 0, 0, 0.2);
   color: #ffffff;
 }
@@ -459,19 +460,17 @@ body:after {
 }
 .list-store li a figure {
   display: block;
-  min-height: 450px;
+  height: 100%;
   padding: 200px 20px;
   position: relative;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   font-family: "Oswald Bold";
 }
 .list-store li a figure img {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
   box-shadow: inset 0px 0px 40px 40px #DBA632;
 }
 .list-store li a figure figcaption {
@@ -503,8 +502,7 @@ body:after {
   opacity: 1;
 }
 .list-store li a figure:hover img {
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .tag-location {
@@ -521,7 +519,7 @@ body:after {
 
 /* Cineshow section */
 .cineshow {
-  background: #103357 url("http://localhost/shopping/wp-content/uploads/2017/09/box-cine-show.png") no-repeat;
+  background: #103357 url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/box-cine-show.png") no-repeat;
   background-size: cover;
 }
 .cineshow .sectionTitle {
@@ -670,8 +668,7 @@ body:after {
   cursor: pointer;
   position: absolute;
   top: 45%;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 .lojas .owl-next,
 .cineshow .owl-next {
@@ -687,8 +684,7 @@ body:after {
 .cineshow:hover .owl-prev,
 .cineshow:hover .owl-next {
   opacity: 1;
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .cineshow {
@@ -727,15 +723,13 @@ body:after {
   top: -250px;
   background-color: #edb62f;
   padding: 15px;
-  -webkit-transition: .2s ease-out;
-          transition: .2s ease-out;
+  transition: .2s ease-out;
 }
 .slider-food .owl-nav .owl-next {
   left: 722px;
 }
 .slider-food:hover .owl-prev, .slider-food:hover .owl-next {
-  -webkit-transition: .2s ease-out;
-          transition: .2s ease-out;
+  transition: .2s ease-out;
   opacity: 1;
 }
 
@@ -841,19 +835,16 @@ body:after {
 #instagram a {
   display: inline-block;
   max-width: 16.6666667%;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #instagram a img {
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #instagram a:hover {
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 #instagram a:hover img {
   -webkit-filter: grayscale(0%);
@@ -998,6 +989,33 @@ body:after {
   display: block;
 }
 
+.search-content {
+  display: inline;
+  float: left;
+  width: 64.9122807018%;
+  margin: 0 0.8771929825%;
+  float: right;
+}
+.search-content .entry-title {
+  font-family: "Oswald Light";
+  font-size: 1.5em;
+  background-color: #f4f4f4;
+  text-align: left;
+  cursor: pointer;
+  padding: 35px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: .3s ease-out;
+}
+.search-content .entry-title:hover {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.02);
+  background-color: #ffffff;
+  transition: 0.3s ease-out;
+}
+.search-content span, .search-content .entry-content, .search-content .essb_break_scroll {
+  display: none;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -1039,6 +1057,47 @@ body:after {
 .site-menu {
   text-align: right;
 }
+.site-menu form {
+  width: 300px;
+  position: absolute;
+  top: -7px;
+  float: right;
+  right: 338px;
+}
+.site-menu form input[type^='search'] {
+  display: block;
+  float: right;
+  width: 0%;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+  font-weight: 700;
+  margin: 0;
+  opacity: 0;
+  transition: .5s;
+}
+.site-menu form i {
+  z-index: 10;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  top: 10px;
+  right: 20px;
+  color: #ffffff;
+  position: absolute;
+}
+.site-menu form i:hover {
+  cursor: pointer;
+}
+.site-menu .search-active input[type^='search'] {
+  width: 100%;
+  opacity: 1;
+  transition: .5s;
+}
+.site-menu .search-active i {
+  color: #103357;
+}
 .site-menu ul > li {
   display: inline-block;
   position: relative;
@@ -1062,21 +1121,18 @@ body:after {
   left: 0;
   bottom: -5px;
   background-color: #fff;
-  -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transform: scaleX(0);
+  transition: .3s ease-out;
   border-radius: 25px;
 }
 .site-menu ul > li > a:hover span {
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transform: scaleX(1);
+  transition: .3s ease-out;
 }
 
+.site-menu {
+  position: relative;
+}
 .site-menu .current-menu-item a span {
   position: absolute;
   display: block;
@@ -1085,11 +1141,8 @@ body:after {
   left: 0;
   bottom: -5px;
   background-color: #fff;
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transform: scaleX(1);
+  transition: .3s ease-out;
   border-radius: 25px;
 }
 
@@ -1113,10 +1166,9 @@ body:after {
 .mega-menu {
   width: 100%;
   position: absolute;
-  background: #24292e url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/foto-mega-menu-2.jpg") no-repeat;
+  background: #24292e url("http://shoppingpiratas.com.br/wp-content/uploads/2017/09/mega-menu.png") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   height: 100vh;
   z-index: 14;
   top: -800%;
@@ -1170,15 +1222,13 @@ body:after {
 }
 
 .slide, .hide {
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .overlay {
   left: 0;
   top: 50px;
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .overlay.show {
@@ -1198,8 +1248,6 @@ body:after {
 }
 .menu-left ul li {
   margin-bottom: 20px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .menu-left ul li a {
@@ -1216,14 +1264,12 @@ body:after {
   height: 2px;
   width: 0%;
   background-color: #fff;
-  -webkit-transition: .3s;
-          transition: .3s;
+  transition: .3s;
 }
 .menu-left ul li:hover span {
   width: 100%;
   background-color: #ffffff;
-  -webkit-transition: .3s;
-          transition: .3s;
+  transition: .3s;
 }
 
 .menu-right {
@@ -1243,8 +1289,7 @@ body:after {
   left: -30px;
   text-align: right;
   opacity: 0;
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 .menu-right .menu-close i {
   font-size: 25px;
@@ -1252,8 +1297,7 @@ body:after {
 }
 .menu-right .menu-close:hover p {
   opacity: 1;
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 .menu-right ul {
   display: inline;
@@ -1275,8 +1319,7 @@ body:after {
 .menu-right ul li a {
   position: relative;
   color: #fff;
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 .menu-right ul li a span {
   display: block;
@@ -1285,14 +1328,12 @@ body:after {
   height: 1px;
   width: 0%;
   background-color: #fff;
-  -webkit-transition: .3s;
-          transition: .3s;
+  transition: .3s;
 }
 .menu-right ul li:hover span {
   width: 100%;
   background-color: #ffffff;
-  -webkit-transition: .3s;
-          transition: .3s;
+  transition: .3s;
 }
 
 /* ==========================================================================
@@ -1304,6 +1345,7 @@ body:after {
 }
 
 .top-footer {
+  clear: both;
   *zoom: 1;
   background-color: #ffffff;
   padding: 75px 0;
@@ -1414,8 +1456,7 @@ body:after {
   left: 12px;
 }
 .social-footer a:hover {
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   color: #ffffff;
   background-color: #191c20;
   border-color: #0e1011;
@@ -1635,8 +1676,7 @@ object {
   position: relative;
   color: #103357;
   font-size: 1em;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .lojas-info .social-links li a i {
   position: absolute;
@@ -1647,8 +1687,7 @@ object {
   left: 13px;
 }
 .lojas-info .social-links li a:hover {
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   background: #103357;
   color: #ffffff;
 }
@@ -1746,8 +1785,7 @@ object {
 .entry-social > li > a:hover {
   background: none;
   border: 1px solid;
-  -webkit-transition: all .1s linear;
-          transition: all .1s linear;
+  transition: all .1s linear;
 }
 .entry-social > li > .fb > i {
   left: 15px;
@@ -1966,8 +2004,7 @@ object {
   width: 100%;
   border: 2px solid rgba(0, 0, 0, 0.1);
   outline: 0;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 .widget_search .search-field:focus {
   border: 2px solid #24292e;
@@ -1978,8 +2015,7 @@ object {
    ========================================================================== */
 .effect-bubba:hover img {
   opacity: 0.1;
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
+  filter: blur(2px);
 }
 
 .effect-bubba figcaption::before,
@@ -2055,8 +2091,7 @@ object {
   border: 2px solid #103357;
   color: #103357;
   letter-spacing: 1px;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   font-weight: 600;
 }
 .button:hover {
@@ -2142,6 +2177,108 @@ input[type="search"] {
 /* ==========================================================================
    Responsive
    ========================================================================== */
+/*
+   Ipad
+   Landscape
+*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .wrapper {
+    max-width: 890px;
+    position: relative;
+  }
+}
+/*
+   Ipad
+   Portrait
+*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .wrapper {
+    max-width: 680px;
+    position: relative;
+  }
+
+  .site-branding {
+    display: inline;
+    float: left;
+    width: 31.5789473684%;
+    margin: 0 0.8771929825%;
+  }
+
+  .site-menu {
+    display: inline;
+    float: left;
+    width: 56.5789473684%;
+    margin: 0 0.8771929825%;
+  }
+
+  .list-store li a figure {
+    height: 232px;
+    padding: 0;
+  }
+}
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .mega-menu {
+    top: -1140px;
+  }
+
+  .lojas,
+  .cineshow,
+  .food,
+  .blog,
+  .feed-instagram {
+    padding: 0 30px;
+  }
+
+  .site-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .lojas .owl-next,
+  .cineshow .owl-next {
+    right: 0;
+  }
+
+  .lojas .owl-prev,
+  .cineshow .owl-prev {
+    left: 0;
+  }
+
+  .logo-desktop {
+    height: 45px;
+  }
+
+  .site-menu {
+    margin-top: 13px;
+  }
+
+  .menu-mobile {
+    margin-top: 18px;
+  }
+
+  .slider-food,
+  .box-boat {
+    background-size: cover;
+  }
+
+  .destaque {
+    padding-top: 105px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .wrapper {
+    max-width: 1140px;
+  }
+
+  .mega-menu {
+    padding: 35px 0;
+  }
+
+  .top-footer {
+    padding: 50px 0;
+  }
+}
 @media (max-width: 415px) {
   .site-header {
     left: -1px;
@@ -2209,7 +2346,7 @@ input[type="search"] {
     left: 86%;
   }
 
-  .title-page {
+  .title-store {
     margin-top: 164px;
   }
 
@@ -2255,15 +2392,13 @@ input[type="search"] {
   }
 
   .slide, .hide {
-    -webkit-transition: all 0.2s ease;
-            transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
 
   .overlay {
     left: 0;
     top: 50px;
-    -webkit-transition: all 0.2s ease;
-            transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
 
   .overlay.show {
@@ -2448,10 +2583,11 @@ input[type="search"] {
   }
 
   .entry-store {
-    display: inline;
-    float: left;
-    width: 100%;
+    display: block;
+    float: none;
+    width: 100% !important;
     margin: 0;
+    padding: 0px;
   }
   .entry-store .single-store .store-box {
     border: none;
@@ -2493,7 +2629,9 @@ input[type="search"] {
     text-align: center;
     max-width: 100%;
     display: block;
-    padding-left: 0;
+    padding: 0 25px;
+    margin: 0;
+    padding-top: 50px;
   }
 
   .lojas-slider {
@@ -2502,10 +2640,20 @@ input[type="search"] {
   }
 
   .entry-contact {
-    display: inline;
+    display: block;
     width: 100% !important;
-    margin: 0;
-    float: none;
+    margin: 0 !important;
+    padding: 0 20px;
+    padding-top: 33px;
+  }
+  .entry-contact input {
+    margin-bottom: 15px;
+  }
+  .entry-contact .input-email, .entry-contact .input-tel {
+    width: 100% !important;
+  }
+  .entry-contact .input-tel {
+    padding-top: 15px;
   }
   .entry-contact input[type^='submit'] {
     display: inline-block;
@@ -2520,13 +2668,11 @@ input[type="search"] {
     font-weight: 600;
     margin-top: 20px;
     background-color: #fff;
-    -webkit-transition: .3s ease-out;
-            transition: .3s ease-out;
+    transition: .3s ease-out;
   }
   .entry-contact input[type^='submit']:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    -webkit-transition: .3s ease-out;
-            transition: .3s ease-out;
+    transition: .3s ease-out;
   }
   .entry-contact input[type=search],
   .entry-contact input[type=email],
@@ -2541,6 +2687,17 @@ input[type="search"] {
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     margin: 0;
+  }
+
+  .search-content {
+    display: inline;
+    float: left;
+    width: 98.2456140351%;
+    margin: 0 0.8771929825%;
+    float: none !important;
+  }
+  .search-content .entry-title {
+    text-align: center;
   }
 }
 @media (max-width: 375px) {
@@ -2612,13 +2769,11 @@ input[type="search"] {
   font-weight: 600;
   margin-top: 20px;
   background-color: #fff;
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 .entry-contact input[type^='submit']:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-transition: .3s ease-out;
-          transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 .entry-contact input[type=search],
 .entry-contact input[type=email],

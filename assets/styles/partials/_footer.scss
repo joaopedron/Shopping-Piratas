@@ -9,6 +9,7 @@
 
 // Top footer
 .top-footer {
+    clear: both;
     @include clearfix();
     background-color: $light;
     padding: 75px 0;
